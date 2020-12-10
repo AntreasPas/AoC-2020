@@ -1,4 +1,4 @@
-package day9;
+package day09;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -48,7 +48,7 @@ public class Main {
     }
 
     public static void main(String[] args) throws IOException {
-        Long[] input = Files.lines(Path.of("./src/day9/input.txt")).map(Long::parseLong).toArray(Long[]::new);
+        Long[] input = Files.lines(Path.of("./src/day09/input.txt")).map(Long::parseLong).toArray(Long[]::new);
         System.out.println("----- DAY 9 - PART 1 -----");
         long part1Result = part1(input, 25);
         System.out.printf("First number encountered that is not the sum of two of the %d numbers before it: %d%n",

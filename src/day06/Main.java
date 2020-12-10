@@ -1,4 +1,4 @@
-package day6;
+package day06;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -46,7 +46,7 @@ public class Main {
     }
 
     public static void main(String[] args) throws IOException {
-        List<String> input = Files.readAllLines(Path.of("./src/day6/input.txt"));
+        List<String> input = Files.readAllLines(Path.of("./src/day06/input.txt"));
         System.out.println("----- DAY 6 - PART 1 -----");
         System.out.printf("Sum of counts %d%n", getSumOfCountsPart1(input));
         System.out.println("----- DAY 6 - PART 2 -----");

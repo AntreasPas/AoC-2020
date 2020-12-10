@@ -1,4 +1,4 @@
-package day8;
+package day08;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -76,7 +76,7 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         Instruction[] instructions = Files
-                .lines(Path.of("./src/day8/input.txt"))
+                .lines(Path.of("./src/day08/input.txt"))
                 .map(Instruction::new)
                 .toArray(Instruction[]::new);
         System.out.println("----- DAY 8 - PART 1 -----");

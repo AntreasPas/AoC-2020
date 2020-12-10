@@ -1,4 +1,4 @@
-package day4;
+package day04;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -12,7 +12,7 @@ public class Main {
             throws IOException {
         List<Passport> passports = new ArrayList<>();
         try (BufferedReader br
-                     = new BufferedReader(new FileReader("./src/day4/input.txt"))) {
+                     = new BufferedReader(new FileReader("./src/day04/input.txt"))) {
             String line;
             Passport passport = new Passport();
             while ((line = br.readLine()) != null) {

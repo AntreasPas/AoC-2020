@@ -1,4 +1,4 @@
-package day5;
+package day05;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -18,7 +18,7 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         List<Integer> seatIds = Files
-                .lines(Path.of("./src/day5/input.txt"))
+                .lines(Path.of("./src/day05/input.txt"))
                 .map(Seat::new)
                 .map(Seat::getSeatId)
                 .sorted()

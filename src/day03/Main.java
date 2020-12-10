@@ -1,4 +1,4 @@
-package day3;
+package day03;
 
 import java.io.IOException;
 import java.math.BigInteger;
@@ -10,7 +10,7 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        List<String> lines = Files.readAllLines(Path.of("./src/day3/input.txt"));
+        List<String> lines = Files.readAllLines(Path.of("./src/day03/input.txt"));
         // Converting to 2D char array will make traversal easier
         char[][] matrix = new char[lines.size()][];
         for (int i = 0; i < lines.size(); i++) {

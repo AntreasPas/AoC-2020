@@ -1,4 +1,4 @@
-package day7;
+package day07;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -66,7 +66,7 @@ public class Main {
     }
 
     public static void main(String[] args) throws IOException {
-        Stream<String> inputStream = Files.lines(Path.of("./src/day7/input.txt"));
+        Stream<String> inputStream = Files.lines(Path.of("./src/day07/input.txt"));
         Main main = new Main(inputStream);
         System.out.println("----- DAY 7 - PART 1 -----");
         System.out.printf("# of bags eventually containing shiny gold: %d%n", main.part1());

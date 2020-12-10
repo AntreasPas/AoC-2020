@@ -1,4 +1,4 @@
-package day2;
+package day02;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -8,7 +8,7 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        List<String> lines = Files.readAllLines(Path.of("./src/day2/input.txt"));
+        List<String> lines = Files.readAllLines(Path.of("./src/day02/input.txt"));
         System.out.println("----- DAY 2 - PART 1 -----");
         System.out.printf("%d valid passwords%n", lines.stream().filter(Main::isPasswordValidPart1).count());
         System.out.println("----- DAY 2 - PART 2 -----");

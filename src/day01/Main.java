@@ -1,4 +1,4 @@
-package day1;
+package day01;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -48,7 +48,7 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         List<Integer> numbers = Files
-                .lines(Path.of("./src/day1/input.txt"))
+                .lines(Path.of("./src/day01/input.txt"))
                 .map(Integer::parseInt)
                 .collect(Collectors.toList());
         part1(numbers);
