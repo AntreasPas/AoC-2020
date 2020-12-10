@@ -8,6 +8,32 @@ import java.util.stream.Collectors;
 
 public class Main {
 
+    private static long countPathsToEnd(int[] input, long[] memo, int currentIndex) {
+        int lastIndex = input.length - 1;
+        long count = 0;
+        // Reached final adapter
+        if (currentIndex == lastIndex) {
+            count = 1;
+        }
+        // Already calculated
+        else if (memo[currentIndex] > 0) {
+            count = memo[currentIndex];
+        }
+        // Calculate and memoize
+        else {
+            int upToIndex = Math.min(currentIndex + 3, lastIndex);
+            // Loop to upToIndex, or break if iteration adapter joltage is > 3 than current adapter
+            for (int i = currentIndex + 1; i <= upToIndex && input[i] <= input[currentIndex] + 3; i++)
+                count += countPathsToEnd(input, memo, i);
+            memo[currentIndex] = count;
+        }
+        return count;
+    }
+
+    private static long part2(int[] input) {
+        return countPathsToEnd(input, new long[input.length], 0);
+    }
+
     private static int part1(int[] input) {
         int joltDiff1Count = 0, joltDiff3Count = 0;
         for (int i = 0; i < input.length - 1; i++) {
@@ -16,34 +42,6 @@ public class Main {
             if (diff == 3) joltDiff3Count++;
         }
         return joltDiff1Count * joltDiff3Count;
-    }
-
-    private static long countPathsToEnd(int[] input, long[] memo, int currentIndex) {
-        int lastIndex = input.length - 1;
-        long count = 0;
-        if (currentIndex == lastIndex)
-            // Reached final adapter
-            count = 1;
-        else if (memo[currentIndex] > 0)
-            // Already calculated
-            count = memo[currentIndex];
-        else {
-            // Calculate and memoize
-            for (
-                    int i = currentIndex + 1;
-                    i <= Math.min(currentIndex + 3, lastIndex)
-                            && input[i] <= input[currentIndex] + 3;
-                    i++
-            )
-                count += countPathsToEnd(input, memo, i);
-            memo[currentIndex] = count;
-        }
-        return count;
-    }
-
-    private static long part2(int[] input) {
-        long[] memo = new long[input.length];
-        return countPathsToEnd(input, memo, 0);
     }
 
     public static void main(String[] args) throws IOException {
