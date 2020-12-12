@@ -27,7 +27,7 @@ public class Main {
         System.out.println("----- DAY 11 - PART 1 -----");
         System.out.printf("Seats occupied: %d%n",
                 part1(seatingSystem.getCopy()));
-        System.out.println("----- DAY 12 - PART 1 -----");
+        System.out.println("----- DAY 11 - PART 2 -----");
         System.out.printf("Seats occupied: %d%n",
                 part2(seatingSystem.getCopy()));
     }
